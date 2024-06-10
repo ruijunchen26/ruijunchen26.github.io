@@ -69,6 +69,124 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-349. 两个数组的交集" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/06/10/349.%20%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86/" class="article-date">
+  <time class="dt-published" datetime="2024-06-10T14:41:10.478Z" itemprop="datePublished">2024-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/06/10/349.%20%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86/">349. 两个数组的交集</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>class Solution &#123;
+    public int[] intersection(int[] nums1, int[] nums2) &#123;
+        int[] arr = new int[1000];
+        for (int i : nums1) &#123;
+            arr[i]++;
+        &#125;
+        Set&lt;Integer&gt; set = new HashSet();
+        for (int j : nums2) &#123;
+            if (arr[j] &gt; 0) &#123;
+                set.add(j);
+            &#125;
+        &#125;
+        int[] result = new int[set.size()];
+        int i = 0;
+        for (int r : set) &#123;
+            result[i++] = r;
+        &#125;
+        return result;
+    &#125;
+&#125;
+## 总结
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/06/10/349.%20%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86/" data-id="clx93q34y0001cd95gvl464q6" data-title="349. 两个数组的交集" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-242. 有效的字母异位词" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/06/10/242.%20%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/" class="article-date">
+  <time class="dt-published" datetime="2024-06-10T14:28:40.509Z" itemprop="datePublished">2024-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/06/10/242.%20%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/">242. 有效的字母异位词</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>class Solution &#123;
+    public boolean isAnagram(String s, String t) &#123;
+        int[] arr = new int[26];
+        for(char c:s.toCharArray())&#123;
+            arr[c-&#39;a&#39;]++;
+        &#125;
+        for(char c:t.toCharArray())&#123;
+            arr[c-&#39;a&#39;]--;
+        &#125;
+        for(int i=0;i&lt;arr.length;i++)&#123;
+            if(arr[i] != 0)&#123;
+                return false;
+            &#125;
+        &#125;
+        return true;
+    &#125;
+&#125;
+## 总结
+最后判结果时，不能累加判和，需要逐位判断
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/06/10/242.%20%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/" data-id="clx93q34w0000cd957ky067tf" data-title="242. 有效的字母异位词" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-二分法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/06/10/%E4%BA%8C%E5%88%86%E6%B3%95/" class="article-date">
@@ -136,6 +254,14 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/06/10/349.%20%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86/">349. 两个数组的交集</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/10/242.%20%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/">242. 有效的字母异位词</a>
+          </li>
         
           <li>
             <a href="/2024/06/10/%E4%BA%8C%E5%88%86%E6%B3%95/">二分法</a>
