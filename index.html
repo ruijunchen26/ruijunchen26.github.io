@@ -69,6 +69,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-202. 快乐数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/06/10/202.%20%E5%BF%AB%E4%B9%90%E6%95%B0/" class="article-date">
+  <time class="dt-published" datetime="2024-06-10T15:04:33.216Z" itemprop="datePublished">2024-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/06/10/202.%20%E5%BF%AB%E4%B9%90%E6%95%B0/">202. 快乐数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isHappy(int n) &#123;</span><br><span class="line">        Set&lt;Integer&gt; set = new HashSet();</span><br><span class="line">        while (n != 1 &amp;&amp; !set.contains(n)) &#123;</span><br><span class="line">            set.add(n);</span><br><span class="line">            n = getNext(n);</span><br><span class="line">        &#125;</span><br><span class="line">        return n == 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private int getNext(int n) &#123;</span><br><span class="line">        int result = 0;</span><br><span class="line">        while (n &gt; 0) &#123;</span><br><span class="line">            int m = n % 10;ß</span><br><span class="line">            result = result + m * m;</span><br><span class="line">            n = n / 10;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>第一个for循环要注意先把n加入到set中，不然会漏</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/06/10/202.%20%E5%BF%AB%E4%B9%90%E6%95%B0/" data-id="clx93trzw0000ef95evdfd6ib" data-title="202. 快乐数" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-349. 两个数组的交集" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/06/10/349.%20%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86/" class="article-date">
@@ -254,6 +294,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/06/10/202.%20%E5%BF%AB%E4%B9%90%E6%95%B0/">202. 快乐数</a>
+          </li>
         
           <li>
             <a href="/2024/06/10/349.%20%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86/">349. 两个数组的交集</a>
